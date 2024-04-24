@@ -1,18 +1,19 @@
 <?php require_once 'config.php'; ?>
+<?php require_once 'materialConfig.php'; ?>
 <head>
     <title>CyberCity</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/Styles.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/Styles.css">
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark navbarCustom navbar-bg-dark">
     <a class="navbar-brand" href="<?php echo BASE_URL; ?>index.php">
-        <img src="/assets/img/CCLogo.png" alt="" width="100" height="100">
+        <img src="<?php echo BASE_URL; ?>assets/img/CCLogo.png" alt="" width="100" height="100">
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav me-auto "> <!--Left side of navbar-->
             <li class="nav-item active">
@@ -74,17 +75,15 @@
             </li>
         </ul>
         ';}
-        ?>
-
-        <?php
         } else {
         echo '
-        <ul class="navbar-nav me-auto"> <!--Left side of navbar-->
+        </ul>
+        <ul class="navbar-nav ms-auto"> <!--Left side of navbar-->
             <!-- #Register button (when NOT logged in)"><a class="nav-link navbar_Dark" href="' . BASE_URL . 'pages/use -->
             <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/register.php">Register</a></li>
       
             <!-- Login button (when NOT logged in) -->
-            <li class="nav-item active"><a class="nav-link text-white" href="' . BASE_URL . 'pages/user/login.php">Login</a></li>
+            <li><md-filled-button href="' . BASE_URL . 'pages/user/login.php"><a class="nav-link text-white">Login</a></md-filled-button></li>
         ';}
         ?>
         </ul>
@@ -112,7 +111,7 @@ if (isset($_SESSION['flash_message'])) {
 ?>
 
 
-<script src="/assets/js/bootstrap.bundle.js"></script>
+<script src="<?php echo BASE_URL; ?>assets/js/bootstrap.bundle.js"></script>
 
 
 <?php

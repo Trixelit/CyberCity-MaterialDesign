@@ -9,7 +9,7 @@ if (!authorisedAccess(false, true, true)) {
 <div>
     <title>Cyber City - Challenges</title>
 
-    <link rel="stylesheet" href="/assets/css/moduleList.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/moduleList.css">
 
     <h1 >Challenge List</h1>
 
@@ -28,10 +28,10 @@ if (!authorisedAccess(false, true, true)) {
             // Check if the "Modules" have an image attachs to it.
             if ($moduleInformation['Image']) { 
                 // Display Module Image.
-                echo "<div class='image'><img src='/assets/img/challengeImages/" . $moduleInformation['Image'] . " ' width='100' height='100'></div>";
+                echo "<div class='image'><img src='" . BASE_URL ."assets/img/challengeImages/" . $moduleInformation['Image'] . " ' width='100' height='100'></div>";
             } else {
                 // Display Placeholder Image
-                echo "<div class='image'><img src='/assets/img/challengeImages/Image Not Found.jpg' width='100' height='100'></div>";
+                echo "<div class='image'><img src='" . BASE_URL ."assets/img/challengeImages/Image Not Found.jpg' width='100' height='100'></div>";
             }
     ?>
 
